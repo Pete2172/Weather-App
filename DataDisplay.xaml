@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="WeatherApp.DataDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WeatherApp"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="220"
+             Background="Black">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label x:Name="City_Name" Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="0" VerticalAlignment="Stretch" FontWeight="Bold" FontSize="14" Foreground="White" Content="City"/>
+        <Label x:Name="Date" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="0" VerticalAlignment="Stretch" FontWeight="Bold" FontSize="14" Foreground="White" Content="day, time"/>
+        <Label x:Name="Status" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" VerticalAlignment="Center" FontWeight="Bold" FontSize="14" Foreground="White" Content="Status" HorizontalAlignment="Center"/>
+        <Label Grid.Row="4" Grid.Column="3" VerticalAlignment="Stretch" FontWeight="Bold" FontSize="12" Foreground="White" Content="Humidity:" HorizontalAlignment="Center"/>
+        <Label x:Name="Humidity" Grid.Row="5" Grid.Column="3" VerticalAlignment="Stretch"  FontSize="12" Foreground="White" Content="0%" HorizontalAlignment="Center"/>
+        <Label Grid.Row="4" Grid.Column="0" VerticalAlignment="Stretch"  FontSize="12" Foreground="White" Content="Pressure:" FontWeight="Bold" HorizontalAlignment="Center"/>
+        <Label x:Name="Pressure" Grid.Row="5" Grid.Column="0" VerticalAlignment="Stretch" FontSize="12" Foreground="White" Content="0" HorizontalAlignment="Center"/>
+        <Image x:Name="StatusImage" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" VerticalAlignment="Stretch"/>
+        <Label x:Name="Temp" Grid.Row="4" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Content="0" Foreground="White"/>
+        <Image x:Name="WindImage" Grid.Row="6" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Source="Resources/wind.png"/>
+        <Label Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Content="Wind speed:" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Label x:Name="WindSpeed" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image x:Name="Sunset" Grid.Row="8" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Source="Resources/sunset.png" />
+        <Label Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2" Content="Sunset:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="SetDate" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image x:Name="Sunrise" Grid.Row="10" Grid.Column="0" Grid.RowSpan="2" VerticalAlignment="Stretch" Source="Resources/sunrise.png"  />
+        <Label Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" Content="Sunrise:" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"/>
+        <Label x:Name="RiseDate" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" Content="0" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+    </Grid>
+</UserControl>

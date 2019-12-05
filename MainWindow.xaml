@@ -1,0 +1,26 @@
+﻿<Window x:Class="WeatherApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WeatherApp"
+        mc:Ignorable="d"
+        Title="Weather App" Height="460" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="390*"></RowDefinition>
+            <RowDefinition Height="29*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:DataDisplay x:Name="datDisp" Grid.Row="0" Grid.Column="0" />
+        <local:WeatherMap x:Name="weatherMap" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label Content="Type city's name: " Background="DarkBlue" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Stretch" Foreground="White" Height="24" Margin="0,2,0,3"/>
+        <Button x:Name="Button" Grid.Row="1" Grid.Column="2" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,5,145,5" Width="131" Click="Button_Click"/>
+        <Button x:Name="Default" Grid.Row="1" Grid.Column="2" Content="Default" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="158,5,10,5" Width="131" Click="Default_Click"/>
+        <TextBox x:Name="TextBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
